@@ -28,7 +28,7 @@ Chain_id = web3.eth.chain_id
 start_nonce = web3.eth.get_transaction_count(sender_address)
 
 print("current quotient is:", contract.functions.cur_quotient().call())
-ans = int(input("enter a divisor: "))
+ans = int(input("enter a prime divisor: "))
 
 call_function = contract.functions.check_sol(ans).build_transaction({"from": sender_address, "value": 10 ** 17, "nonce": start_nonce})
 # Sign transaction
